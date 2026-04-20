@@ -1,0 +1,23 @@
+{
+  "overview": "A pixel-perfect React + Bootstrap 5 clone of sweetyicecream.com — a family-made ice cream brand website featuring a flavor grid, scrolling banners, story section, gallery, and newsletter signup.",
+  "features": [
+    "Pixel-accurate clone of sweetyicecream.com",
+    "8 sections: Navbar, Hero, Flavors, Scrolling Banner, Story, Gallery, Newsletter, Footer",
+    "Bootstrap 5 grid and responsive layout",
+    "Real ice cream photos replacing original mochi imagery",
+    "Marquee-style scrolling text animation",
+    "Email newsletter signup form",
+    "Fully responsive on mobile, tablet, and desktop"
+  ],
+  "category": "showcase",
+  "tags": [
+    "ice-cream",
+    "food",
+    "landing-page",
+    "bootstrap",
+    "react",
+    "clone",
+    "static-site"
+  ],
+  "last_updated": "2026-04-20T08:54:15.484Z"
+}

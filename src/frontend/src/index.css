@@ -1,0 +1,489 @@
+/* Bootstrap is imported in main.tsx */
+
+/* ---- Brand tokens ---- */
+:root {
+  --cream: #fff8f0;
+  --cream-dark: #f5ede0;
+  --navy: #1a1a2e;
+  --navy-light: #2a2a42;
+  --accent: #e84d6f;
+  --accent-hover: #d43c5e;
+  --text-dark: #1a1a1a;
+  --text-light: #fff8f0;
+}
+
+/* ---- Base ---- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background-color: var(--cream);
+  color: var(--text-dark);
+  margin: 0;
+  padding: 0;
+}
+
+/* ---- Typography ---- */
+.font-display {
+  font-family: "Abril Fatface", "Playfair Display", Georgia, serif;
+}
+
+.font-display-bold {
+  font-family: "Playfair Display", "Abril Fatface", Georgia, serif;
+  font-weight: 900;
+}
+
+h1,
+h2,
+h3,
+.heading-display {
+  font-family: "Abril Fatface", "Playfair Display", Georgia, serif;
+  letter-spacing: 0.04em;
+}
+
+/* ---- Navbar ---- */
+.sweety-navbar {
+  background-color: var(--cream);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  padding: 0.75rem 0;
+}
+
+.sweety-navbar .navbar-brand {
+  font-family: "Abril Fatface", "Playfair Display", Georgia, serif;
+  font-size: 1.75rem;
+  color: var(--navy);
+  letter-spacing: 0.06em;
+  text-decoration: none;
+}
+
+.sweety-navbar .nav-link {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--navy) !important;
+  padding: 0.5rem 1rem !important;
+  transition: color 0.2s;
+}
+
+.sweety-navbar .nav-link:hover {
+  color: var(--accent) !important;
+}
+
+.sweety-navbar .navbar-toggler {
+  border-color: var(--navy);
+}
+
+.sweety-navbar .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%231a1a2e' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* ---- Hero ---- */
+.sweety-hero {
+  position: relative;
+  min-height: 90vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sweety-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 14, 10, 0.48);
+}
+
+.sweety-hero .hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.sweety-hero .hero-title {
+  font-family: "Abril Fatface", "Playfair Display", Georgia, serif;
+  font-size: clamp(2.8rem, 7vw, 5.5rem);
+  color: #fff;
+  line-height: 1.05;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.sweety-hero .hero-subtitle {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: clamp(0.85rem, 2vw, 1.1rem);
+  color: rgba(255, 255, 255, 0.88);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.btn-accent {
+  background-color: var(--accent);
+  color: #fff;
+  border: none;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 0.85rem 2.2rem;
+  border-radius: 0;
+  transition: background-color 0.2s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-accent:hover {
+  background-color: var(--accent-hover);
+  color: #fff;
+}
+
+/* ---- Section headings ---- */
+.section-heading {
+  font-family: "Abril Fatface", "Playfair Display", Georgia, serif;
+  font-size: clamp(1.6rem, 4vw, 2.5rem);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--navy);
+}
+
+/* ---- Flavors ---- */
+.flavors-section {
+  background-color: var(--cream);
+  padding: 5rem 0;
+}
+
+.flavor-card {
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.flavor-card:hover .flavor-img-wrap img {
+  transform: scale(1.05);
+}
+
+.flavor-img-wrap {
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%;
+  overflow: hidden;
+  background-color: #ede5d8;
+}
+
+.flavor-img-wrap img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.flavor-name {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--navy);
+  margin-top: 0.85rem;
+  margin-bottom: 0.3rem;
+}
+
+.flavor-link {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.75rem;
+  color: var(--accent);
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+}
+
+.flavor-link:hover {
+  text-decoration: underline;
+  color: var(--accent-hover);
+}
+
+/* ---- Scrolling text banner ---- */
+.scrolling-banner {
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 0.85rem 0;
+}
+
+.scrolling-banner.navy-bg {
+  background-color: var(--navy);
+}
+
+.scrolling-banner.cream-bg {
+  background-color: var(--cream-dark);
+}
+
+.scrolling-track {
+  display: inline-flex;
+  animation: marquee-left 28s linear infinite;
+}
+
+.scrolling-track.reverse {
+  animation: marquee-right 28s linear infinite;
+}
+
+.scrolling-track span {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 900;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 0 2rem;
+  display: inline-block;
+}
+
+.scrolling-banner.navy-bg .scrolling-track span {
+  color: var(--cream);
+}
+
+.scrolling-banner.cream-bg .scrolling-track span {
+  color: var(--navy);
+}
+
+@keyframes marquee-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-right {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* ---- Story section ---- */
+.story-section {
+  background-color: var(--cream);
+  padding: 5rem 0;
+}
+
+.story-subtitle {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #555;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.badge-card {
+  background-color: #fff;
+  border: 1.5px solid rgba(0, 0, 0, 0.08);
+  border-radius: 0.5rem;
+  padding: 1.25rem 1rem;
+  text-align: center;
+  transition: box-shadow 0.2s;
+}
+
+.badge-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.badge-icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.badge-label {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--navy);
+}
+
+/* ---- Gallery ---- */
+.gallery-section {
+  padding: 0;
+}
+
+.gallery-img-wrap {
+  position: relative;
+  width: 100%;
+  padding-bottom: 75%;
+  overflow: hidden;
+}
+
+.gallery-img-wrap img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.gallery-img-wrap:hover img {
+  transform: scale(1.04);
+}
+
+/* ---- Newsletter ---- */
+.newsletter-section {
+  background-color: var(--cream);
+  padding: 5rem 0;
+}
+
+.newsletter-pre {
+  font-family: "Abril Fatface", "Playfair Display", Georgia, serif;
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  line-height: 1;
+  color: var(--navy);
+}
+
+.newsletter-title {
+  font-family: "Abril Fatface", "Playfair Display", Georgia, serif;
+  font-size: clamp(3rem, 8vw, 6.5rem);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  line-height: 0.95;
+  color: var(--navy);
+  margin-bottom: 0.5rem;
+}
+
+.newsletter-tagline {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 2.5rem;
+}
+
+.newsletter-section .form-control {
+  border-radius: 0;
+  border: 1.5px solid var(--navy);
+  font-size: 0.85rem;
+  padding: 0.75rem 1rem;
+  background-color: transparent;
+  color: var(--navy);
+}
+
+.newsletter-section .form-control:focus {
+  box-shadow: none;
+  border-color: var(--accent);
+}
+
+.newsletter-section .form-control::placeholder {
+  color: #aaa;
+  letter-spacing: 0.08em;
+}
+
+.btn-dark-outline {
+  background-color: var(--navy);
+  color: var(--cream);
+  border: none;
+  border-radius: 0;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 0.75rem 1.5rem;
+  transition: background-color 0.2s;
+  white-space: nowrap;
+}
+
+.btn-dark-outline:hover {
+  background-color: var(--navy-light);
+  color: var(--cream);
+}
+
+/* ---- Footer ---- */
+.sweety-footer {
+  background-color: var(--navy);
+  color: var(--cream);
+  padding: 3.5rem 0 2rem;
+}
+
+.footer-brand {
+  font-family: "Abril Fatface", "Playfair Display", Georgia, serif;
+  font-size: 1.6rem;
+  letter-spacing: 0.08em;
+  color: var(--cream);
+}
+
+.footer-nav-link {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 248, 240, 0.7);
+  text-decoration: none;
+  margin: 0 0.75rem;
+  transition: color 0.2s;
+}
+
+.footer-nav-link:hover {
+  color: var(--cream);
+}
+
+.footer-divider {
+  border-color: rgba(255, 255, 255, 0.12);
+  margin: 1.5rem 0;
+}
+
+.footer-copyright {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.72rem;
+  color: rgba(255, 248, 240, 0.5);
+  letter-spacing: 0.08em;
+}
+
+.footer-social {
+  font-size: 1.2rem;
+  color: rgba(255, 248, 240, 0.7);
+  margin: 0 0.4rem;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-social:hover {
+  color: var(--cream);
+}
+
+/* ---- Responsive tweaks ---- */
+@media (max-width: 576px) {
+  .sweety-hero .hero-title {
+    font-size: 2.4rem;
+  }
+  .newsletter-pre {
+    font-size: 2rem;
+  }
+  .newsletter-title {
+    font-size: 3rem;
+  }
+}

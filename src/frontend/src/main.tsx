@@ -1,0 +1,28 @@
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import "./index.css";
+
+import { InternetIdentityProvider } from "@caffeineai/core-infrastructure";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+
+BigInt.prototype.toJSON = function () {
+  return this.toString();
+};
+
+declare global {
+  interface BigInt {
+    toJSON(): string;
+  }
+}
+
+const queryClient = new QueryClient();
+
+ReactDOM.createRoot(document.getElementById("root")!).render(
+  <QueryClientProvider client={queryClient}>
+    <InternetIdentityProvider>
+      <App />
+    </InternetIdentityProvider>
+  </QueryClientProvider>,
+);
